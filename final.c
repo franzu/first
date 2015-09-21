@@ -43,9 +43,11 @@ void main(){
 	int *pv;
 	pv = (int *) calloc(100, sizeof (int));
 	v[0]=*pv;
-	printf("numero de elementos do vetor:");
+	printf("numero de elementos inteiros do vetor(entre 0 e 100):");
 	scanf("%d",&n);//LE O NUMERO DE ELEMENTOS DO VETOR
-	printf("elementos:");
+	if(n==0||n==1)return;
+	else{
+	printf("digite os inteiros:");
 	for(i=0;i<n;i++){
 		scanf("%d",&v[i]);//LE TODOS OS N ELEMENTOS
 	}
@@ -55,8 +57,9 @@ void main(){
 	j++;
 } 
 	k=pair(v,n);//ARMAZENA EM K A POSIÇÃO DO VETOR ONDE SE ENCONTRA A DUPLA DE ELEMENTOS MAIS
-	printf("o par de numeros mais proximo é:%d e %d",v[k],v[k+1]);//PROXIMOS. MOSTRA ESTES
+	printf("o par de numeros mais proximo eh:%d e %d",v[k],v[k+1]);//PROXIMOS. MOSTRA ESTES
 	//ELEMENTOS
+	}
 	free(pv);
 	getch();
 }
